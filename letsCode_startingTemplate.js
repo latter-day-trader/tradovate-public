@@ -14,9 +14,9 @@ class letsCodeStartingTemplate {
 
 module.exports = {
     name: "letsCodeStartingTemplate",
-    description: "Lets Code - Starting Template",
+    description: "Let's Code - Starting Template",
     calculator: letsCodeStartingTemplate,
-    tags: ["Lets Code"],
+    tags: ["Let's Code"],
     plots: {
         midPoint: { title: "Mid Point" },
     },
