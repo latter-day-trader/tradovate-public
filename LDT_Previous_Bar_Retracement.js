@@ -12,7 +12,7 @@ function bodyPortion(bar, ratio) {
 }
 
 
-class ldtPreviousBarFibonnaciRetracement {
+class ldtPreviousBarRetracement {
     init() {
         this.rand = Math.floor(Math.random() * 2000);
     }
@@ -77,9 +77,9 @@ class ldtPreviousBarFibonnaciRetracement {
 
 
 module.exports = {
-    name: "ldtPreviousBarFibonnaciRetracement",
-    description: "LDT - Previous Bar Fib Retracement",
-    calculator: ldtPreviousBarFibonnaciRetracement,
+    name: "ldtPreviousBarRetracement",
+    description: "LDT - Previous Bar Retracement",
+    calculator: ldtPreviousBarRetracement,
     tags: ["Latter-day Trader"],
     inputType: meta.InputType.BARS,
     params: {
