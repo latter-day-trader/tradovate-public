@@ -1,17 +1,15 @@
-// This is my test changes
-
 const predef = require("./tools/predef");
 const meta = require("./tools/meta");
 const { px, du, op, min } = require("./tools/graphics");
 
 
-function bodyPortion(bar, ratio) {
+// function bodyPortion(bar, ratio) {
         
-    const body = bar.high() - bar.low();
-    const portion = body * ratio;
+//     const body = bar.high() - bar.low();
+//     const portion = body * ratio;
     
-    return bar.high() - portion;
-}
+//     return bar.high() - portion;
+// }
 
 
 class myRetrace {
@@ -19,8 +17,16 @@ class myRetrace {
         this.rand = Math.floor(Math.random() * 2000);
     }
     
+    bodyPortion(bar, ratio) {
+        
+        const body = bar.high() - bar.low();
+        const portion = body * ratio;
+    
+        return bar.high() - portion;
+    }
+    
     getRetraceLine(bar, i, ratio, lineWidth, lineStyle, color, opacity, global) {
-        const level = bodyPortion(bar, ratio);
+        const level = this.bodyPortionClass(bar, ratio);
         
         const levelLine = {
              tag: 'LineSegments',
@@ -106,7 +112,7 @@ class myRetrace {
         
         if (!d.isLast()) {
             
-            const midPoint = bodyPortion(prior, 0.50);
+            const midPoint = this.bodyPortionClass(prior, 0.50);
             rtn["midPoint"] = midPoint;
         }
         
