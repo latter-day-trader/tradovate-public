@@ -122,17 +122,31 @@ module.exports = {
     params: {
         showOnlyLastBar: predef.paramSpecs.bool(false),
         
+        dividerForRetrace01: predef.paramSpecs.enum(
+            {
+            //s: '---- Retrace Options for the first line ------',
+                s: '------------------------------------------------------------------------------------------------------------------------------------------------------'
+            }, 's'),
+        
         retracePercent01: predef.paramSpecs.percent(0.500, .001, .001, 0.950),
         lineColor01: predef.paramSpecs.color("white"),
         lineWidth01: predef.paramSpecs.percent(3, 1, 1, 5),
         lineStyle01: predef.paramSpecs.percent(1, 1, 1, 5),
         lineOpacity01: predef.paramSpecs.percent(100, 1, 10, 100),
         
+        divider2: predef.paramSpecs.enum({
+            s: '------------------------------------------------------------------------------------------------------------------------------------------------------'
+        }, 's'),
+        
         retracePercent02: predef.paramSpecs.percent(0.382, .001, .001, 0.950),
         lineColor02: predef.paramSpecs.color("dodgerBlue"),
         lineWidth02: predef.paramSpecs.percent(3, 1, 1, 5),
         lineStyle02: predef.paramSpecs.percent(1, 1, 1, 5),
         lineOpacity02: predef.paramSpecs.percent(100, 1, 10, 100),
+        
+        divider3: predef.paramSpecs.enum({
+            s: '------------------------------------------------------------------------------------------------------------------------------------------------------'
+        }, 's'),
         
         retracePercent03: predef.paramSpecs.percent(0.618, .001, .001, 0.950),
         lineColor03: predef.paramSpecs.color("dodgerBlue"),
